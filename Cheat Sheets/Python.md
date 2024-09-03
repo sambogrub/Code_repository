@@ -12,6 +12,9 @@
 ## Random
  - random.shuffle, rearranges items in a mutable object like a list
 
+## Decimal
+ - Decimal('some number') keeps it at the decimal points you set
+
 ## Tkinter
  - .place(anchor, x coor, y coor, height, width) all in pixels, can be relative using rel*. anchor is default NW
  - .resizable(width = True/False, height = True/False)

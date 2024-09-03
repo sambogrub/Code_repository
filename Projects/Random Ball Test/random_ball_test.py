@@ -3,6 +3,11 @@ import random
 red = []
 blue = []
 
+num_red = 13
+num_blue = 20
+
+num_tests = 100
+
 class Ball():
     def __init__(self, color):
         self.color = color
@@ -45,14 +50,14 @@ class Bag():
         return balls
 
 results = []
-for i in range(100):
+for i in range(num_tests):
     
     bag = Bag()
 
-    for i in range(20):
+    for i in range(num_blue):
         bag.add_ball(Ball('blue'))
 
-    for i in range(13):
+    for i in range(num_red):
         bag.add_ball(Ball('red'))
 
 
