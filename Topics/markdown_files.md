@@ -13,4 +13,4 @@
 
 ## LaTeX Syntax
  $ lines surrounded by this will used LaTeX syntax
- - $\theta$ is \$\theta\$ 
+ - $\theta$ is \$\\theta\$ 
