@@ -12,5 +12,6 @@
 
 
 ## LaTeX Syntax
- $ lines surrounded by this will used LaTeX syntax
+ $ lines surrounded by this will used LaTeX syntax. (use the examples minus {} brackets)
  - $\theta$ is {$\theta$}
+ - $\sqrt{x}$ is {$\sqrt{x}$}
