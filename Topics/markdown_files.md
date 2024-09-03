@@ -8,3 +8,9 @@
  - \*\*text\*\* makes the text **bold** (so does \__)
  - \[\] is used for links (also \(\))
  - \{\} used for inline code blocks
+ - \<\> used for HTML tags
+
+
+## LaTeX Syntax
+ $ lines surrounded by this will used LaTeX syntax
+ - $\theta$ is \$\theta\$ 
