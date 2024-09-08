@@ -9,8 +9,6 @@
  - Cheat Sheets
    - Different languages and concepts
  - Snippets
-   - Different languages
- - Projects
-   - Personal projects to build my portfolio
+   - Code blocks to be reused
  - General topics
    - Basic thoughts and topics not covered above
