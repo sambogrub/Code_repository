@@ -2,10 +2,23 @@
  The Python language and it's libraries
  
 ## Python basics
+ - use context managers! with()
  - lambda is a single line, one-off function. 
    - lambda x: x+2 will give the result of whatever you put in plus 2.
    - can be used with dataframes like .apply(lambda row: row.sum(), axis =1), where axis =1 means itterate over the rows
-
+ - map() => map(function,iterable)
+ - match statements
+   - variable = 'value'
+   - match variable:
+     - case 'value':
+       - do something
+     - case 'value2':
+       - do something else
+     - case default:
+       - do something when nothing matches
+ - using _variable with the underscore allows the use of a setter method. it allows you to assign a value to the variable and the class object will run the corrisponding function.
+ - list comprehension, making a list from another action. list = [operation for value in list]
+   - can be used with zip => dict = {x: y for x,y in zip(listx,listy)}
 ## Datetime
  - date.today() - returns current local date
 
@@ -25,6 +38,7 @@
    - value_vars - columns to unpivot
    - var_name - new column name that will store original column names
    - value_name - new column that stores values from original columns
+ - contingency table - pd.crosstab(x,y)
   
 
 ## Matplotlib
@@ -32,6 +46,15 @@
 
 ## Seaborn
 
+## Scipy
+ - ttest_ind - two sample t-test (tstat, pval = ttest_ind(samp1,samp2))
+ - ttest_1samp - one sample t-test (tstat, pval = ttest_1samp(popsample, popmean))
+ - .stats => chi2, pval, dof, expected = chi2_contingency(contingency table) 
+
+## statsmodels
+ - pairwise_tukeyhsd - used to compare multiple groups and their dependent variables
+   - example: stores A, B, C and their sales
+   - results = pairwise_tukeyhsd(dependant variables, groups, type 1 error rate)
 
 ## Scikit_learn
  - __Linear regression__
