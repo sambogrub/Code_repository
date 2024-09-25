@@ -19,6 +19,8 @@
  - using _variable with the underscore allows the use of a setter method. it allows you to assign a value to the variable and the class object will run the corrisponding function.
  - list comprehension, making a list from another action. list = [operation for value in list]
    - can be used with zip => dict = {x: y for x,y in zip(listx,listy)}
+ - slices
+   - [first: last(not inclusive): steps]
 ## Datetime
  - date.today() - returns current local date
 
@@ -31,6 +33,7 @@
 ## Tkinter
  - .place(anchor, x coor, y coor, height, width) all in pixels, can be relative using rel*. anchor is default NW
  - .resizable(width = True/False, height = True/False)
+ - .tkraise() brings the widget to the front
 
 ## Pandas
  - pd.melt(frame, id_vars, value_vars, var_name, value_name, col_level, ignore_index) 
@@ -39,12 +42,29 @@
    - var_name - new column name that will store original column names
    - value_name - new column that stores values from original columns
  - contingency table - pd.crosstab(x,y)
+ - pd.get_dummies(df[columns], drop_first = True)
+   - creates a df with given columns and fills in dummy variables
+   - drop_first = True, drops the first category to help with regression models
+   - 
   
+## numpy
+ - np.mean() gives mean/average of list/array
+ - np.std() gives standard deviation of list/array
+ - np.max() give max value
+ - np.min() gives min value
+ - np.array() sets list into a numpy array
+ - .reshape(-1,1) -1 is to have numpy arrange number of rows, 1 is number of columns
+ - 
 
 ## Matplotlib
-
+ - plt.hist() plots a histogram
+   - use bins = some_value to set the intervals by which the data is devided
+ - plt.show() to show the current plot
+ - plt.close() to close the current plot, allowing you to build and show a new one without interference
 
 ## Seaborn
+ - df.corr(), correlation matrix of the dataframe
+
 
 ## Scipy
  - ttest_ind - two sample t-test (tstat, pval = ttest_ind(samp1,samp2))
@@ -107,3 +127,17 @@
      - train_size - the proportion of the dataset to include in the train split
      - test_size - the proportion of the dataset to include in the test split
      - random_state - the see used by the random number generator (optional)
+
+## sklearn
+ - .preprocessing
+   - StandardScaler - transforms a dataset feature, standardizing it
+     - use scaler = StandardScaler to instantiate it
+     - .fit_transform() takes a one column array and standardizes it
+   - MinMaxScaler
+     - use mmscaler = MinMaxScaler() to instantiate it
+     - .fit_transform() take a one column array and standardizes it
+ - .neighbors
+   - KNeighborsClassifier - uses neighbors around an unknow to classify based on training data
+     - takes an n_neighbors attribute when instantiated
+     - .fit(training_points,training_labels) trains the classifier on the given data 
+     - .predict(list_of_points) takes a list of the points you want to classify then returns a list of those classifications
